@@ -1,28 +1,59 @@
-# Smart MUET Guide V2 — User Testing Portal
+# Smart MUET Guide V2 — User Testing Portal (Complete Fixed Version)
 
-Files:
-- `index.html` — landing page
-- `about.html` — testing purpose and participant guidance
-- `journey.html` — consent + demographic/baseline questions
-- `tasks.html` — guided tasks for Speaking, Reading, Listening and Writing
-- `feedback.html` — Google Forms feedback page
-- `styles.css` — responsive Smart MUET neo-brutalist styling
-- `app.js` — progress tracking, guide launch, Google Form configuration
+This package is ready for GitHub Pages.
 
-## Connect Google Forms
-Edit `app.js`:
+## Correct folder structure
+
+- index.html
+- about.html
+- journey.html
+- tasks.html
+- feedback.html
+- css/
+  - styles.css
+- js/
+  - app.js
+- .nojekyll
+- README.md
+
+## Important fixes applied
+
+1. All HTML pages now load CSS from:
+   `css/styles.css`
+
+2. All HTML pages now load JavaScript from:
+   `js/app.js`
+
+3. `.nojekyll` is included so GitHub Pages serves this as a plain static HTML/CSS/JS site.
+
+4. Existing Smart MUET Guide V2 link remains configured in `js/app.js`.
+
+## GitHub upload
+
+Upload ALL files and folders exactly as shown above to the repository root.
+
+Do not move `styles.css` or `app.js` back to the root unless you also change the paths in every HTML page.
+
+## Google Form
+
+Open:
+`js/app.js`
+
+Update:
 
 ```js
-googleFormEmbedUrl: "PASTE_EMBED_URL_HERE",
-googleFormPublicUrl: "PASTE_SHARE_URL_HERE"
+googleFormEmbedUrl: "PASTE_YOUR_GOOGLE_FORM_EMBED_URL",
+googleFormPublicUrl: "PASTE_YOUR_GOOGLE_FORM_SHARE_URL"
 ```
 
-## Smart MUET Guide
-Already linked to:
-https://juliemarlina-collab.github.io/Smart-MUET-Guide/
+Then commit the change.
 
-## Deployment
-Upload all files to a GitHub repository and enable GitHub Pages from the folder/branch containing `index.html`.
+## GitHub Pages
 
-## Important
-Progress uses browser `localStorage`; this prototype does not create a custom participant database. Google Forms is intended to remain the response collection system.
+Repository > Settings > Pages
+
+Use:
+- Branch: `main`
+- Folder: `/ (root)`
+
+After deployment, hard refresh the site or clear browser cache if the old unstyled page is still showing.
