@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Feedback — Smart MUET Guide V2 Testing</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .intro-box {
+      background: #fffef5;
+      border: 3px solid #1a1a1a;
+      border-radius: 0;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+    }
+    .intro-box h3 {
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    .intro-box p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .intro-box ul {
+      margin-left: 1.5rem;
+    }
+    .intro-box li {
+      margin-bottom: 0.5rem;
+    }
+    .form-container {
+      background: #fffef5;
+      border: 3px solid #1a1a1a;
+      border-radius: 0;
+      padding: 1.5rem;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+      min-height: 600px;
+    }
+    #googleFormFrame {
+      border: none;
+      width: 100%;
+      min-height: 800px;
+    }
+    #formPlaceholder {
+      padding: 1.5rem;
+      background: #e8f0f7;
+      border-left: 4px solid #0088cc;
+      margin-bottom: 1rem;
+    }
+    #openForm {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #0088cc;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #0088cc;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    #openForm:hover {
+      background: #005a99;
+      border-color: #005a99;
+    }
+    .completion-box {
+      background: #f0fff0;
+      border: 3px solid #00aa00;
+      border-radius: 0;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+    }
+    .completion-box h3 {
+      color: #00aa00;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Progress -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Test Progress</h2>
+      <p><strong data-progress>0/5</strong> steps done</p>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" data-progress-bar></div>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html">Participant Info</a></li>
+        <li><a href="about.html">About This Test</a></li>
+        <li><a href="tasks.html">Test Components</a></li>
+        <li class="active"><a href="#feedback">Your Feedback</a></li>
+        <li><a href="facilitator.html">Facilitator Guide</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="page-header">
+      <h1>💬 Your Feedback</h1>
+      <p class="subtitle">Smart MUET Guide V2 Testing Survey (10–15 minutes)</p>
+    </header>
+
+    <div class="page-body">
+
+      <!-- Introduction -->
+      <section class="intro-box">
+        <h3>✨ Thank You for Testing!</h3>
+        <p>
+          You've explored the Smart MUET Guide V2 and tried the practice tasks. Now we'd love to hear your honest thoughts.
+        </p>
+        <p>
+          <strong>Your feedback is incredibly valuable.</strong> We'll use your answers to improve the app's design, 
+          clarity, and effectiveness for the next version. Even if something wasn't perfect — that's exactly what we need to know!
+        </p>
+      </section>
+
+      <!-- What We're Asking -->
+      <section class="intro-box">
+        <h3>📝 What We're Asking</h3>
+        <p>The feedback form includes questions about:</p>
+        <ul>
+          <li><strong>Usability & Navigation:</strong> Was the app easy to use? Could you find what you needed?</li>
+          <li><strong>Clarity of Information:</strong> Did the MUET information make sense?</li>
+          <li><strong>Support & Learning:</strong> Did the app help you understand MUET better?</li>
+          <li><strong>Each Component:</strong> Feedback on Speaking, Reading, Listening, and Writing sections</li>
+          <li><strong>Overall Experience:</strong> Your readiness for MUET and suggestions for improvement</li>
+          <li><strong>Open-Ended Comments:</strong> Anything else you'd like to share?</li>
+        </ul>
+      </section>
+
+      <!-- Instructions -->
+      <section class="intro-box">
+        <h3>⏱️ Time & Privacy</h3>
+        <ul>
+          <li><strong>Time:</strong> This survey takes <strong>10–15 minutes</strong> to complete.</li>
+          <li><strong>Privacy:</strong> Your responses are <strong>completely anonymous</strong> — we don't collect your name or ID.</li>
+          <li><strong>Honesty:</strong> There are no "right" or "wrong" answers. Be as honest as possible — critical feedback is valuable!</li>
+          <li><strong>No Rush:</strong> Take your time. If you need to pause, you can come back to it later.</li>
+        </ul>
+      </section>
+
+      <!-- Google Form -->
+      <section class="form-container">
+        <h3 style="margin-top: 0;">📋 Feedback Form</h3>
+        <p style="color: #666; font-size: 0.9rem;">
+          The form below will open in a few seconds. If it doesn't appear, click the button below to open it in a new tab.
+        </p>
+
+        <!-- Embedded Google Form -->
+        <iframe id="googleFormFrame" title="Smart MUET Guide V2 Feedback Form" hidden></iframe>
+
+        <!-- Fallback if embed doesn't work -->
+        <div id="formPlaceholder" hidden>
+          <p>
+            <strong>The feedback form didn't load.</strong> No worries! You can still submit your feedback by clicking the button below 
+            to open the form in a new tab.
+          </p>
+          <a id="openForm" href="" target="_blank" hidden>
+            📝 Open Feedback Form in New Tab
+          </a>
+        </div>
+
+        <p style="color: #666; font-size: 0.85rem; margin-top: 1.5rem;">
+          <strong>Note:</strong> Once you submit the form, your response is recorded and cannot be edited. 
+          Please review your answers before submitting.
+        </p>
+      </section>
+
+      <!-- Completion Message -->
+      <section class="completion-box">
+        <h3>✅ You're Almost Done!</h3>
+        <p>
+          Once you submit the feedback form, you've completed the entire testing session. 
+          Thank you for your valuable contribution to improving Smart MUET Guide V2!
+        </p>
+        <p style="font-size: 0.9rem; color: #666;">
+          If you have any final questions or concerns, please let your facilitator know before leaving.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Participant Information & Consent — Smart MUET Guide V2 Testing</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .consent-section {
+      background: #fffef5;
+      border: 3px solid #1a1a1a;
+      border-radius: 0;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+    }
+    .consent-section h3 {
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    .consent-section p, .consent-section li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .consent-section ul {
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .consent-section li {
+      margin-bottom: 0.4rem;
+    }
+    .checkbox-wrapper {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #e8f0f7;
+      border-left: 4px solid #0088cc;
+    }
+    .checkbox-wrapper input[type="checkbox"] {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .checkbox-wrapper label {
+      cursor: pointer;
+      font-weight: 500;
+      margin: 0;
+    }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .button-group button {
+      flex: 1;
+      min-width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Progress -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Test Progress</h2>
+      <p><strong data-progress>0/5</strong> steps done</p>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" data-progress-bar></div>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#journey">Participant Info &amp; Consent</a></li>
+        <li><a href="about.html">About This Test</a></li>
+        <li><a href="tasks.html">Test Components</a></li>
+        <li><a href="feedback.html">Your Feedback</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="page-header">
+      <h1>Participant Information & Consent Form</h1>
+      <p class="subtitle">Smart MUET Guide V2 — User Testing Study</p>
+    </header>
+
+    <div class="page-body">
+      <form id="consentForm" class="consent-form">
+        
+        <!-- Section 1: Study Purpose -->
+        <section class="consent-section">
+          <h3>🎯 Study Purpose</h3>
+          <p>
+            This study evaluates the <strong>Smart MUET Guide V2</strong>, a digital learning tool designed 
+            to support Malaysian matriculation students in preparing for the MUET (Malaysian University English Test).
+          </p>
+          <p>
+            Your feedback will help us improve the app's usability, clarity, and effectiveness in supporting your MUET preparation.
+          </p>
+        </section>
+
+        <!-- Section 2: What You'll Do -->
+        <section class="consent-section">
+          <h3>📋 What Participation Involves</h3>
+          <ul>
+            <li><strong>Baseline Survey</strong> (5 min) — Your background and familiarity with MUET</li>
+            <li><strong>Explore the App</strong> (45–60 min) — Work through practice tasks for Speaking, Reading, Listening, and Writing</li>
+            <li><strong>Feedback Questionnaire</strong> (10–15 min) — Share your experience and suggestions</li>
+          </ul>
+          <p><strong>Total estimated time:</strong> 60–90 minutes</p>
+        </section>
+
+        <!-- Section 3: Your Rights -->
+        <section class="consent-section">
+          <h3>⚖️ Your Rights as a Participant</h3>
+          <ul>
+            <li><strong>Voluntary Participation:</strong> You may withdraw from the study at any time without penalty or explanation.</li>
+            <li><strong>Right to Refuse:</strong> You can choose not to answer any question.</li>
+            <li><strong>No Deception:</strong> This study contains no hidden procedures or deception.</li>
+            <li><strong>No Coercion:</strong> Your participation will not affect your grades or academic standing.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4: Confidentiality & Data Security -->
+        <section class="consent-section">
+          <h3>🔒 Confidentiality &amp; Data Protection</h3>
+          <p>Your privacy is our highest priority:</p>
+          <ul>
+            <li><strong>No Personal Identifiers:</strong> Your responses will be anonymous. We will not collect your name, student ID, or personal email.</li>
+            <li><strong>Data Storage:</strong> Your responses are stored securely in Google Forms and linked to your device (localStorage) only during this session.</li>
+            <li><strong>Data Retention:</strong> Responses will be retained for 6 months for analysis, then permanently deleted.</li>
+            <li><strong>Authorized Access:</strong> Only the research team at POLIPD has access to aggregated, anonymized results.</li>
+            <li><strong>No Sharing:</strong> Your individual responses will not be shared with third parties.</li>
+          </ul>
+        </section>
+
+        <!-- Section 5: Study Benefits & Risks -->
+        <section class="consent-section">
+          <h3>✨ Benefits &amp; Risks</h3>
+          <p><strong>Benefits:</strong></p>
+          <ul>
+            <li>Early access to an innovative MUET preparation tool</li>
+            <li>Personalized feedback on your speaking, reading, listening, and writing</li>
+            <li>Your input will shape a tool designed to support students like you</li>
+          </ul>
+          <p><strong>Risks:</strong> Minimal. You may experience mild discomfort if you find certain test components challenging, but there are no physical or psychological risks.</p>
+        </section>
+
+        <!-- Section 6: Questions & Support -->
+        <section class="consent-section">
+          <h3>❓ Questions &amp; Support</h3>
+          <p>If you have questions or concerns at any time:</p>
+          <ul>
+            <li><strong>Research Team:</strong> Julie Marlina bt Hasan, English Language Unit, POLIPD</li>
+            <li><strong>Facilitator:</strong> [Facilitator Name] — [Facilitator Email]</li>
+            <li><strong>Technical Support:</strong> If the app doesn't work, please inform your facilitator immediately.</li>
+          </ul>
+          <p><em>If you wish to withdraw during testing, simply inform your facilitator and you may leave at any time.</em></p>
+        </section>
+
+        <!-- Section 7: Informed Consent -->
+        <section class="consent-section">
+          <h3>✍️ Your Consent</h3>
+          <p>Please read the statements below and check the box if you agree to all terms:</p>
+          
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="consentAgree" required />
+            <label for="consentAgree">
+              I have read and understand the participant information above. I understand my rights, 
+              confidentiality protections, and that my participation is entirely voluntary. I agree to participate 
+              in this study and provide feedback on the Smart MUET Guide V2.
+            </label>
+          </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary" onclick="location.href='index.html'">
+            ← Back to Home
+          </button>
+          <button type="submit" class="btn btn-primary">
+            I Agree — Continue to Baseline →
+          </button>
+        </div>
+      </form>
+
+      <!-- Baseline Form (collapsible) -->
+      <section id="baseline" class="consent-section" style="margin-top: 3rem; display: none;">
+        <h2>📊 Baseline Survey</h2>
+        <p class="subtitle">Help us understand your MUET experience (5 minutes)</p>
+        
+        <form id="baselineForm" style="margin-top: 1.5rem;">
+          <div class="form-group">
+            <label for="programme"><strong>Your Programme:</strong></label>
+            <select id="programme" name="programme" required>
+              <option value="">— Select your programme —</option>
+              <option value="engineering">Diploma in Engineering</option>
+              <option value="business">Diploma in Business Management</option>
+              <option value="hospitality">Diploma in Hospitality</option>
+              <option value="maritime">Diploma in Maritime Operations</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="semester"><strong>Current Semester:</strong></label>
+            <select id="semester" name="semester" required>
+              <option value="">— Select your semester —</option>
+              <option value="1">Semester 1</option>
+              <option value="2">Semester 2</option>
+              <option value="3">Semester 3+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label><strong>How familiar are you with MUET?</strong></label>
+            <div style="margin-top: 0.5rem;">
+              <label style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                <input type="radio" name="familiar" value="never" required />
+                <span style="margin-left: 0.5rem;">Never heard of it / Very new</span>
+              </label>
+              <label style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                <input type="radio" name="familiar" value="somewhat" />
+                <span style="margin-left: 0.5rem;">Somewhat familiar (learnt basics)</span>
+              </label>
+              <label style="display: flex; align-items: center;">
+                <input type="radio" name="familiar" value="very" />
+                <span style="margin-left: 0.5rem;">Very familiar (have studied / taken it)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><strong>How prepared do you feel for MUET?</strong></label>
+            <div style="margin-top: 0.5rem;">
+              <label style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                <input type="radio" name="prepared" value="unprepared" required />
+                <span style="margin-left: 0.5rem;">Not prepared yet</span>
+              </label>
+              <label style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                <input type="radio" name="prepared" value="somewhat" />
+                <span style="margin-left: 0.5rem;">Somewhat prepared</span>
+              </label>
+              <label style="display: flex; align-items: center;">
+                <input type="radio" name="prepared" value="confident" />
+                <span style="margin-left: 0.5rem;">Confident and ready</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn btn-secondary" onclick="document.querySelector('#baseline').style.display='none'">
+              Hide This Section
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Save Baseline & Go to Tasks →
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Show baseline form when consent is submitted
+    document.addEventListener("DOMContentLoaded", () => {
+      const s = loadState();
+      if (s.consent) {
+        document.querySelector("#baseline").style.display = "block";
+      }
+      
+      // Check for anchor link
+      if (location.hash === "#baseline") {
+        document.querySelector("#baseline").style.display = "block";
+        document.querySelector("#baseline").scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  </script>
+</body>
+</html>

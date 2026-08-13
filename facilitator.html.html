@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facilitator Guide — Smart MUET Guide V2 Testing Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .guide-section {
+      background: #fffef5;
+      border: 3px solid #1a1a1a;
+      border-radius: 0;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+    }
+    .guide-section h3 {
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    .guide-section p, .guide-section li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .guide-section ul, .guide-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .timeline {
+      display: grid;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: #e8f0f7;
+      border-left: 4px solid #0088cc;
+    }
+    .timeline-time {
+      font-weight: 700;
+      min-width: 80px;
+      color: #0088cc;
+    }
+    .timeline-content {
+      flex: 1;
+    }
+    .checklist {
+      display: grid;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .checklist-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.5rem;
+      background: #fff5e6;
+      border-left: 3px solid #ff9900;
+    }
+    .checklist-item input[type="checkbox"] {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    .checklist-item label {
+      cursor: pointer;
+      margin: 0;
+    }
+    .highlight-box {
+      background: #fffacd;
+      border: 2px dashed #cc8800;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-weight: 500;
+    }
+    .code {
+      background: #1a1a1a;
+      color: #00dd00;
+      padding: 0.75rem;
+      border: 2px solid #1a1a1a;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Facilitator Menu</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html">← Back to Portal Home</a></li>
+        <li class="active"><a href="#guide">Facilitator Guide</a></li>
+        <li><a href="#setup">Pre-Test Setup</a></li>
+        <li><a href="#during">During Testing</a></li>
+        <li><a href="#after">After Testing</a></li>
+        <li><a href="#troubleshoot">Troubleshooting</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="page-header">
+      <h1>👨‍🏫 Facilitator Guide</h1>
+      <p class="subtitle">Running the Smart MUET Guide V2 User Testing Session</p>
+    </header>
+
+    <div class="page-body">
+
+      <!-- Overview -->
+      <section id="guide" class="guide-section">
+        <h3>📚 What Is This Testing Session?</h3>
+        <p>
+          This is a <strong>usability and feedback study</strong> where matriculation students test the <strong>Smart MUET Guide V2</strong> 
+          digital learning app and provide structured feedback on its effectiveness.
+        </p>
+        <p><strong>Your role as facilitator:</strong> Manage the session flow, answer questions, ensure ethical compliance, and collect data.</p>
+        <p><strong>Duration:</strong> 90 minutes per session (groups of 5–15 students recommended)</p>
+      </section>
+
+      <!-- Pre-Test Checklist -->
+      <section id="setup" class="guide-section">
+        <h3>📋 Pre-Test Setup (48 Hours Before)</h3>
+        <p>Use this checklist to prepare:</p>
+        <div class="checklist">
+          <div class="checklist-item">
+            <input type="checkbox" id="check1" />
+            <label for="check1"><strong>Device & Network:</strong> Test that all computers/devices have stable internet. Have WiFi passwords ready.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="check2" />
+            <label for="check2"><strong>Portal Access:</strong> Open the portal in 2–3 browsers to confirm all pages load correctly.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="check3" />
+            <label for="check3"><strong>Google Form:</strong> Test the feedback form in the portal to ensure responses submit successfully.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="check4" />
+            <label for="check4"><strong>Smart MUET Guide:</strong> Verify the main app loads correctly at <code>https://juliemarlina-collab.github.io/Smart-MUET-Guide/</code></label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="check5" />
+            <label for="check5"><strong>Printed Materials:</strong> Print consent forms (if needed as backup) and facilitator notes.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="check6" />
+            <label for="check6"><strong>Attendance List:</strong> Prepare a sign-in sheet or attendance tracking method.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="check7" />
+            <label for="check7"><strong>Contact Info:</strong> Have Julie Marlina's contact (julie.marlina@polipd.edu.my / [phone]) available in case of emergencies.</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Session Timeline -->
+      <section id="during" class="guide-section">
+        <h3>⏱️ Session Timeline (90 Minutes Total)</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">00:00–10 min</div>
+            <div class="timeline-content">
+              <strong>Welcome & Orientation</strong><br/>
+              Greet students. Explain the study purpose, benefits, and that participation is voluntary. 
+              Distribute or display the consent form.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">10–15 min</div>
+            <div class="timeline-content">
+              <strong>Consent Collection</strong><br/>
+              Students read consent and agree digitally (tick checkbox on journey.html). 
+              Record consent status. Answer any questions about privacy/withdrawal.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">15–20 min</div>
+            <div class="timeline-content">
+              <strong>Baseline Survey</strong><br/>
+              Students complete baseline form (programme, semester, MUET familiarity, preparation level). 
+              Monitor for completion.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">20–75 min</div>
+            <div class="timeline-content">
+              <strong>Explore Smart MUET Guide</strong><br/>
+              Students navigate the app independently (55 minutes). They should explore all four components 
+              (Speaking, Reading, Listening, Writing). Circulate to observe, answer Q&amp;As, note usability issues.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">75–90 min</div>
+            <div class="timeline-content">
+              <strong>Feedback Survey & Wrap-Up</strong><br/>
+              Students complete the feedback questionnaire (Google Form). 
+              Collect any final observations. Thank participants and dismiss.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- During Testing: Detailed Instructions -->
+      <section class="guide-section">
+        <h3>🎬 What to Say & Do During Testing</h3>
+
+        <h4 style="margin-top: 1.5rem;">Welcome Script (First 5 minutes):</h4>
+        <div class="code">
+"Welcome, everyone. Thank you for taking part in this study.<br/>
+Today you'll test a new app called 'Smart MUET Guide V2' that helps prepare<br/>
+for the MUET exam. Your honest feedback is very valuable to us.<br/>
+<br/>
+This is NOT a test of you — it's a test of the app. There are no right or wrong<br/>
+answers. If something doesn't work or is confusing, that's exactly what we need<br/>
+to know so we can improve it.<br/>
+<br/>
+Your participation is completely voluntary. You can stop at any time without<br/>
+any penalty. All your responses will be kept private and anonymous."
+        </div>
+
+        <h4 style="margin-top: 1.5rem;">During App Exploration:</h4>
+        <ul>
+          <li><strong>Observe silently:</strong> Watch how students navigate. Note any confusion, clicks that don't work, pauses.</li>
+          <li><strong>Don't guide:</strong> If a student gets stuck, ask "What are you trying to do?" rather than directing them.</li>
+          <li><strong>Record issues:</strong> Note any errors, broken links, or confusing moments in your facilitator notes.</li>
+          <li><strong>Be available:</strong> Position yourself where students can easily ask questions.</li>
+          <li><strong>Encourage exploration:</strong> If a student finishes early, say: "Have you tried the Reading section? Or Writing? Any component you're curious about?"</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem;">Responding to Questions:</h4>
+        <div style="background: #f0f8ff; padding: 1rem; border-left: 4px solid #0088cc; margin: 1rem 0;">
+          <strong style="color: #0088cc;">Student:</strong> "Is this the right answer?"<br/>
+          <strong style="color: #008800;">You:</strong> "The app will show you feedback. What do you think?"<br/><br/>
+          <strong style="color: #0088cc;">Student:</strong> "The button doesn't work."<br/>
+          <strong style="color: #008800;">You:</strong> "Good catch — we need to know that. Let's note it down. Try the next section?"<br/><br/>
+          <strong style="color: #0088cc;">Student:</strong> "Can I skip Reading and do Writing instead?"<br/>
+          <strong style="color: #008800;">You:</strong> "Absolutely — explore whatever interests you most."
+        </div>
+      </section>
+
+      <!-- After Testing -->
+      <section id="after" class="guide-section">
+        <h3>✅ After Testing (Wrap-Up)</h3>
+        <ul>
+          <li><strong>Collect attendance:</strong> Confirm all participants signed in.</li>
+          <li><strong>Verify feedback submissions:</strong> Check the Google Form responses (open the form results or shared sheet).</li>
+          <li><strong>Document any verbal feedback:</strong> Write down any comments students mentioned.</li>
+          <li><strong>Note technical issues:</strong> List any app errors, broken links, or usability problems you observed.</li>
+          <li><strong>Send thank-you message:</strong> Thank students for their time and honest feedback.</li>
+          <li><strong>Report to Julie:</strong> Send facilitator report within 24 hours.</li>
+        </ul>
+
+        <h4 style="margin-top: 1rem;">Facilitator Report Template:</h4>
+        <div class="code">
+Date: [Session Date]<br/>
+Time: [Start—End]<br/>
+Facilitator: [Your Name]<br/>
+Location: [Room/Lab]<br/>
+Participants: [# students who attended / # registered]<br/>
+<br/>
+Technical Issues Observed:<br/>
+- [Issue 1]<br/>
+- [Issue 2]<br/>
+<br/>
+Usability Observations:<br/>
+- [Observation 1]<br/>
+<br/>
+Student Comments (Verbal):<br/>
+- [Comment 1]<br/>
+<br/>
+Feedback Form Status:<br/>
+- [# responses received out of # participants]
+        </div>
+      </section>
+
+      <!-- Troubleshooting -->
+      <section id="troubleshoot" class="guide-section">
+        <h3>🔧 Troubleshooting Common Issues</h3>
+
+        <h4 style="margin-top: 1rem;">❌ Portal won't load</h4>
+        <ul>
+          <li>Check internet connection (WiFi working?)</li>
+          <li>Try a different browser (Chrome, Firefox, Safari)</li>
+          <li>Clear browser cache (Ctrl+Shift+Delete)</li>
+          <li>Contact Julie if issue persists</li>
+        </ul>
+
+        <h4 style="margin-top: 1rem;">❌ Students can't open the Smart MUET Guide app</h4>
+        <ul>
+          <li>Confirm the main app URL: <code>https://juliemarlina-collab.github.io/Smart-MUET-Guide/</code></li>
+          <li>Wait 10–15 seconds for the app to load (GitHub Pages can be slow)</li>
+          <li>Try a different computer/browser</li>
+          <li>Ask students to accept any pop-ups or warnings</li>
+        </ul>
+
+        <h4 style="margin-top: 1rem;">❌ Google Form isn't loading in the feedback section</h4>
+        <ul>
+          <li>The form should appear as an embedded view in the page</li>
+          <li>If it doesn't, students can click "Open in New Tab" link as a fallback</li>
+          <li>Make sure their responses are submitted (check form results after session)</li>
+        </ul>
+
+        <h4 style="margin-top: 1rem;">❌ Student forgot their progress or page reloaded</h4>
+        <ul>
+          <li>Explain that progress is saved in the browser (localStorage)</li>
+          <li>Clearing browser cache will reset progress</li>
+          <li>They can go back and re-complete sections (it's OK)</li>
+        </ul>
+
+        <h4 style="margin-top: 1rem;">❌ A student wants to withdraw</h4>
+        <ul>
+          <li>Thank them for their honesty and willingness to participate</li>
+          <li>Confirm no penalty applies</li>
+          <li>Ask if they want to delete their data from the form (optional)</li>
+          <li>Note withdrawal in your attendance records</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>⚠️ For ANY major technical issue:</strong><br/>
+          Contact Julie Marlina immediately: julie.marlina@polipd.edu.my<br/>
+          or call [Phone Number]
+        </div>
+      </section>
+
+      <!-- Key Reminders -->
+      <section class="guide-section">
+        <h3>🎯 Key Reminders</h3>
+        <ul>
+          <li><strong>Ethical:</strong> Maintain student confidentiality. No names are collected.</li>
+          <li><strong>Supportive:</strong> Create a comfortable, low-stress environment. It's not a performance test.</li>
+          <li><strong>Observant:</strong> Watch for usability issues. Silent observation is gold data.</li>
+          <li><strong>Responsive:</strong> Answer questions about the app, privacy, or withdrawal process promptly.</li>
+          <li><strong>Organized:</strong> Keep attendance, timings, and issue notes clear.</li>
+          <li><strong>Responsive to Julie:</strong> Send reports and log any concerns within 24 hours.</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="guide-section" style="background: #e8f0f7; border-color: #0088cc;">
+        <h3 style="color: #0088cc;">📞 Questions or Emergencies?</h3>
+        <p>
+          <strong>Research Lead:</strong> Julie Marlina bt Hasan<br/>
+          Unit Bahasa Inggeris, POLIPD<br/>
+          Email: julie.marlina@polipd.edu.my<br/>
+          Phone: [To be filled in]<br/><br/>
+          <strong>Portal/Technical Support:</strong> [Technical contact, if applicable]
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
