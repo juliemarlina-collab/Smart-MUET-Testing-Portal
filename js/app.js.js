@@ -1,8 +1,8 @@
 // Smart MUET Guide V2 Testing Portal — Enhanced Configuration
 const CONFIG = {
   guideUrl: "https://juliemarlina-collab.github.io/Smart-MUET-Guide/",
-  googleFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfJ86lEpLLc-uh-aLTvqL7RUN1CVN2zpU0-5v5or1pvdPEc0g/viewform?embedded=true",
-  googleFormPublicUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfJ86lEpLLc-uh-aLTvqL7RUN1CVN2zpU0-5v5or1pvdPEc0g/viewform?usp=pp_url"
+  googleFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfK0nWnHNeqPKZzmR22lnNZ_mt2mZbA4XwpBMhjwvdfx1f7lw/viewform?embedded=true",
+  googleFormPublicUrl: "https://forms.gle/555Yy5dVjkF7vus48"
 };
 
 const STORE_KEY = "smgTestingPortal";
